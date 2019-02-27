@@ -1,0 +1,83 @@
+.post-modal .bar-header {
+	background: linear-gradient(to bottom, #00B9C8, #00CCB3);
+}
+.post-modal.anonymous .bar-header {
+	background: linear-gradient(to bottom, #6950B6, #5473D0);
+}
+.post-modal .bar-header .title {
+	color: #fff;
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+}
+.post-modal .bar-footer {
+	background-color: #F7F4F1;
+}
+.post-modal .bar-footer .ion-camera {
+	position: absolute;
+	top: 9px;
+	left: 15px;
+}
+.post-modal .bar-footer {
+	-webkit-transform: translateZ(0);
+	/*-webkit-transition:all 0.1s linear;*/
+}
+.post-modal {
+	/*-webkit-transform: translateZ(0);*/
+	/*-webkit-transition:all 0.5s linear;*/
+}
+.post-modal .bar-footer .button-title {
+	color: #8E8E93;
+	position: absolute;
+	left: 15px;
+	top: 5px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+}
+.post-modal .bar-footer .right-button {
+	width: 50%;
+	position: absolute;
+	right: 0;
+}
+.post-modal .bar-footer .toggle {
+	position: absolute;
+	right: 10px;
+}
+.post-modal .toggle input:checked + .track {
+	background-color: #4CD764;
+	border-color: #4CD764;
+}
+.post-modal .bar-footer .icon-right {
+	color: #C7C7CC;
+}
+.post-modal .bar-footer .icon-right::before {
+	font-size: 24px!important;
+}
+
+.post-modal.anonymous .post-footer {
+	background-color: #545454;
+}
+
+.post-modal.anonymous .toggle input:checked + .track {
+	background-color: #8E84FF;
+	border-color: #8E84FF;
+}
+
+.post-modal progress[value] {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+}
+
+.post-modal progress[value]::-webkit-progress-bar {
+	background-color: #fff;
+}
+
+.post-modal progress[value]::-webkit-progress-value {
+	background-color: #593CAF;
+}
+.post-modal .image.error {
+	opacity: 0.3;
+}

@@ -1,0 +1,31 @@
+<ion-view title="" class="background-gradient login">
+	<div class="row" style="margin-top: 70px;">
+		<div class="col-50 col-offset-25">
+			<h2 class="white-text special-font" style="text-align: center; font-size: 40px;">Кулуар</h2>
+		</div>
+	</div>
+	<div class="row white-text">
+		<div class="padding login-buttons margin-top" style="width: 100%; padding: 15px;" ng-class="{red: invalidPhone}">
+			<div class="phone">
+				<span class="prefix" ng-click="selectPhoneRegion()" ng-bind="selectedRegion">+7</span>
+				<input type="tel" class="number" name="phone" ng-model="phone" focus-on-load maxlength="10" ng-pattern="/^[(]{0,1}[0-9]{3}[)\.\- ]{0,1}[0-9]{3}[\.\- ]{0,1}[0-9]{4}$/" ng-focus="invalidPhone = false" />
+			</div>
+			<button class="button" ng-click="sendPhone()">
+				Отправить
+			</button>
+		</div>
+	</div>
+<!--	<div class="row white-text">
+		<div class="col-80 col-offset-10" style="text-align: center; font-size: 15px; font-weight: 500; font-family: 'Helvetica Neue';">
+			Укажите свой номер,<br/>
+			мы пришлем смс с кодом
+		</div>
+	</div>-->
+	<div class="row white-text">
+		<div class="col" style="text-align: center; font-size: 12px; font-weight: 500; font-family: 'Helvetica Neue';">
+			Регистрируясь, вы соглашаетесь с <br/>
+			<a href="https://kuluarapp.com/static/eula">Пользовательское соглашение</a>,
+			<a href="https://kuluarapp.com/static/privacy">Политика конфиденциальности</a>.
+		</div>
+	</div>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view title="Коллеги по работе" class="background-gradient specify">
+	<ion-content class="padding">
+		<div class="row white-text">
+			<div class="col padding invite multiple-items">
+				<form name="form">
+					<div class="">
+						<label class="item item-input" ng-class="{wrong: form.company.$invalid && form.$submitted}">
+							<input type="text" name="company" placeholder="Компания" ng-model="data.groupName" ng-disabled="data.groupId" required>
+						</label>
+						<label class="item item-input" ng-class="{wrong: form.name.$invalid && form.$submitted}">
+							<input type="text" name="name" placeholder="Имя и фамилия" ng-model="data.username" required>
+						</label>
+						<label class="item item-input" ng-class="{wrong: form.email.$invalid && form.$submitted}">
+							<input type="email" name="email" placeholder="Рабочая почта" ng-model="data.email" required>
+						</label>
+					</div>
+					<button class="button button-block" ng-click="save(form)">
+						Готово
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col padding-left white-text" style="text-align: center;">
+				Расскажите немного о компании и себе. Тогда вы сможете<br/>приглашать коллег в кулуар, а они смогут узнать вас.
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

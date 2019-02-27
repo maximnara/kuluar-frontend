@@ -1,0 +1,71 @@
+<ion-view class="post-page" title="" hide-back-button="true">
+	<ion-header-bar align-title="center" class="transparent-bar">
+		<button class="button button-icon icon ion-chevron-left" ng-click="goBack(); $event.stopPropagation(); $event.preventDefault();"></button>
+		<h1 class="title">
+			<div class="author" ng-bind="post.author.name"></div>
+			<div class="date" ng-bind="post.date"></div>
+		</h1>
+		<button class="button button-icon icon icon-more" ng-click="showMore()"></button>
+	</ion-header-bar>
+	<div class="bar bar-header comment-type" ng-class="{'anonymous': anonymous}" align-title="center" ng-show="canShowAnonymousBar">
+		<button class="button button-icon" ng-click="hideAnonymousBar(); $event.stopPropagation(); $event.preventDefault();">
+			<img src="img/icons/close.png" style="width: 20px; height: 20px; margin-top: 30%;"/>
+		</button>
+		<h1 class="title" ng-bind="privacyTexts[anonymous]"></h1>
+		<div class="right-button">
+			<label class="toggle">
+				<input type="checkbox" nav-clear ng-model="anonymous" ng-disabled="canBeAnonymous">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</div>
+	</div>
+	<ion-content has-footer="true">
+		<div class="item item-body body" ui-sref="tab.post">
+			<div class="post-body" bindonce>
+				<div class="post-text" bo-text="post.text"></div>
+				<img class="full-image image" bo-src="post.attachment.img[0]" bo-show="post.attachment.img[0]" alt=""/>
+			</div>
+			<!--<img class="full-image image" src="{{ item.attachment.img[0] }}" alt=""/>-->
+			<div class="bar bar-footer post-footer">
+				<button class="button button-clear left-button"><count-string count="post.comment.count" names="%s комментариев|%s комментарий|%s комментария"></count-string></button>
+				<div class="title"><img src="img/feed-delimiter.png" style="width: 0,8px; height: 16px; position: absolute; top: 18px;" /></div>
+				<div class="right-button" ng-click="toggleLike(post.id)">
+					<a class="icon-left post-button like" ng-class="{active: post.like.liked}">
+						<i class="b-icon"></i>
+						<span class="icon-counter" ng-bind="post.like.count"></span>
+					</a>
+				</div>
+			</div>
+			<!--<div class="bar post-footer" bindonce>
+				<a class="icon-left left-button comment">
+					<div>
+						<count-string count="post.comment.count" names="%s комментариев|%s комментарий|%s комментария"></count-string>
+					</div>
+				</a>
+				<div class="title"><img src="img/feed-delimiter.png" style="width: 0,8px; height: 16px;" /></div>
+				<div class="right-button" ng-click="toggleLike(post.id)">
+					<a class="icon-left post-button like" ng-class="{'is-active': post.like.liked}">
+						<i class="b-icon"></i>
+						<span class="icon-counter" ng-bind="post.like.count"></span>
+					</a>
+				</div>
+			</div>-->
+		</div>
+		<div class="comments">
+			<div class="item item-body comment" ng-repeat="comment in comments | orderBy : comment.date : true" ng-click="showMoreComment(comment.id)" bindonce>
+				<div class="author" bo-text="comment.author.name" bo-hide="comment.isAnonymous" ui-sref="tab.profile({id: comment.author.id})"></div>
+				<div class="author" bo-show="comment.isAnonymous">Аноним</div>
+				<div class="text" bo-text="comment.text"></div>
+			</div>
+		</div>
+	</ion-content>
+	<ion-footer-bar align-title="no-title" ng-class="{'anonymous': anonymous}" keyboard-attach class="comment">
+		<textarea placeholder="Комментарий" rows="1" ng-focus="showAnonymousBar()" ng-blur="hideAnonymousBar()" ng-model="comment" ng-change="showAnonymousBar()" extendable-textarea et-max="3" style="width: 95%; background-color: #fff; padding: 10px;"></textarea>
+		<button class="button button-icon" ng-click="leaveComment()">
+			<img src="img/icons/create-comment.png" style="width: 31px; height: 31px; min-height: 31px; display: table-cell; vertical-align: middle;" ng-show="!anonymous"/>
+			<img src="img/icons/create-comment-anonymous.png" style="width: 31px; height: 31px; min-height: 31px; display: table-cell; vertical-align: middle;" ng-show="anonymous"/>
+		</button>
+	</ion-footer-bar>
+</ion-view>

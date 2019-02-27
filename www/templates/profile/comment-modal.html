@@ -1,0 +1,25 @@
+<ion-modal-view class="post-modal" ng-class="{'anonymous': data.anonymous}">
+	<ion-header-bar>
+		<button class="button button-icon" ng-click="closeCommentWindow()">
+			<img src="img/icons/close.png" style="width: 20px; height: 20px; margin-top: 30%;"/>
+		</button>
+		<h1 class="title">Новый комментарий</h1>
+		<button class="button button-icon" ng-click="leaveComment()" ng-disabled="!canPostComment()">
+			<img src="img/icons/send-post.png" style="width: 24px; height: 24px; margin-top: 7%;"/>
+		</button>
+	</ion-header-bar>
+	<ion-content scroll="false">
+		<textarea rows="15" style="padding: 15px; margin-top: 1px" placeholder=" Как оно?" ng-model="$parent.data.comment" focus-on-load></textarea>
+		<ion-footer-bar align-title="center" keyboard-attach class="post-footer">
+			<div class="right-button">
+				<div class="button-title" ng-bind="privacyTexts[anonymous]"></div>
+				<label class="toggle">
+					<input type="checkbox" nav-clear ng-model="anonymous" ng-change="data.anonymous=anonymous" ng-disabled="canBeAnonymous">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+			</div>
+		</ion-footer-bar>
+	</ion-content>
+</ion-modal-view>

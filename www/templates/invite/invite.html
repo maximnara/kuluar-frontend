@@ -1,0 +1,25 @@
+<ion-view title="Пригласить коллег" class="calm invite">
+	<ion-header-bar  class="bar-subheader">
+		<div class="search">
+			<span class="label" ng-class="{'searchInputFocused': searchInputFocused || searchQuery}">
+				<i class="icon ion-ios7-search placeholder-icon"></i>
+				<span ng-hide="searchQuery">Поиск</span>
+			</span>
+			<input type="search" class="search" ng-model="searchQuery" ng-focus="searchInputFocused=true;" ng-blur="searchInputFocused=false;" />
+		</div>
+	</ion-header-bar>
+	<ion-content>
+		<!--<ion-scroll class="b-menu" direction="x" scrollbar-x="false">
+			<span class="menu-item" ng-repeat="item in menuItems" ng-bind="item.title" ui-sref="{{ item.ref }}" ui-sref-active="active"></span>
+		</ion-scroll>
+		<div ui-view onload="getMutual()"></div>-->
+		<ion-list>
+			<ion-item ng-repeat="item in selectedContacts | filter:searchQuery | orderObjectBy:'name':false" ng-click="invite(item)" bindonce>
+				<img src="img/icons/plus.png" style="width: 15px; position: absolute; top: 12px;" ng-hide="invitedContacts[item.id]"/>
+				<img src="img/icons/added.png" style="width: 15px; position: absolute; top: 12px;" ng-show="invitedContacts[item.id]"/>
+				<div bo-text="item.name" style="padding-left: 28px;"></div>
+				<div style="height: 0.5px; width: 100%; background-color: #B0B0B0; position: absolute; bottom: 0;"></div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

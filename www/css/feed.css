@@ -1,0 +1,164 @@
+.feed.empty {
+	background: -webkit-linear-gradient(top, #00B9C8 0%,#F7F4F1 95%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #00B9C8 0%,#F7F4F1 95%); /* W3C */
+}
+.feed.empty .first-action {
+	display: block;
+	margin: 0 auto 0 auto;
+}
+.feed .post .header {
+	border: 0;
+	padding-bottom: 0;
+	margin-top: 40px
+}
+.feed .post:first-child .header {
+	margin-top: 0px
+}
+.feed .post .body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.feed .post .body .text {
+	margin: 0 0 15px 0;
+	padding: 0 16px 0 16px;
+}
+.feed .post .body .image {
+	width: 95%;
+}
+.feed .post .author-name {
+	font-size: 14px;
+	font-family: 'Helvetica Neue';
+	font-weight: bold;
+	color: rgb(74, 54, 144);
+    float: left;
+}
+.feed .post .date {
+	font-size: 12px;
+	color: rgb(176, 176, 176);
+}
+.feed .post .text {
+	color: #000;
+	font-weight: 500;
+}
+.feed .post .text .link {
+	color: rgb(28, 166, 202);
+}
+.feed .post .buttons-block {
+	border-bottom: 2px rgb(219, 219, 219) solid;
+}
+.feed .post .buttons-block .b-button {
+	padding: 5px 0 5px 20px;
+}
+.feed .post .buttons-block .b-button:last-child {
+
+}
+.feed .post .buttons-block .vertical-line {
+	height: 13px;
+	margin-top: 8px;
+}
+.vertical-line {
+	width: 2px;
+	border-left: 2px rgb(219, 219, 219) solid;
+}
+.feed .b-icon {
+	width: 23px;
+	background-color: #D3D0CE;
+	-webkit-mask-size: contain!important;
+	-webkit-mask-repeat: no-repeat!important;
+	height: 19px;
+	display: inline-block;
+}
+.feed .like .b-icon {
+	-webkit-mask: url(../img/like.svg);
+}
+.feed .like .icon-counter {
+	margin-left: 3px;
+}
+.feed .post-footer .icon-counter {
+	position: absolute;
+	top: 0px;
+	left: 30px;
+}
+.feed .comment {
+    text-decoration: none!important;
+}
+.feed .comment .b-icon {
+	-webkit-mask: url(../img/comment.svg);
+    text-decoration: none!important;
+}
+.feed .post-button.like.is-active .b-icon {
+	background-color: #FBB3B3;
+}
+.feed .comment.is-active .b-icon {
+	background-color: #7FD2E5;
+}
+.feed .post-button.like.is-active .icon-counter {
+	color: #FBB3B3;
+}
+.feed .comment.is-active .icon-counter {
+	color: #7FD2E5;
+}
+.feed .post-footer .like {
+	position: absolute;
+	left: 20px;
+	top: 13px;
+}
+
+
+.feed .post-footer {
+	padding: 0;
+	margin-bottom: 1px;
+	height: 45px;
+	border-top: 0;
+	border-bottom: 0.5px solid #D3D0CE;
+	font-size: 13px;
+	font-weight: 400;
+	font-family: 'Helvetica';
+	color: #B0B0B0;
+	margin-top: -15px;
+}
+.feed .post-footer .left-button {
+	font-size: 13px;
+	font-family: 'Helvetica';
+	font-weight: 400;
+	color: #B0B0B0;
+	height: 100%;
+	width: 50%;
+	z-index: 1;
+}
+.feed .post-footer .left-button div {
+	position: absolute;
+	top: 13px;
+	left: 20px;
+}
+.feed .post-footer .button-title {
+	position: absolute;
+	left: 15px;
+	top: 5px;
+	font-size: 13px;
+	font-family: 'Helvetica';
+}
+.feed .post-footer .right-button {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+}
+.feed .post-footer .left-button.activated {
+	background-color: #F7F4F1;
+}
+.feed .post-footer .right-button.activated {
+	background-color: #F7F4F1;
+}
+.feed .post-footer .toggle {
+	position: absolute;
+	right: 10px;
+}
+
+
+.feed .list .post .body .text {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 20px;
+}

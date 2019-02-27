@@ -1,0 +1,147 @@
+.promo {
+	font-family: 'Helvetica Neue';
+	background-color: #00CCB3;
+}
+.promo .slider-pager .slider-pager-page {
+	color: #fff;
+}
+.promo .slider {
+	height: 100%;
+	text-align: center;
+}
+.promo .background-green {
+	background: -webkit-linear-gradient(top, rgb(0, 162, 181) 0%, rgb(0, 204, 179) 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  rgb(0, 162, 181) 0%, rgb(0, 204, 179) 100%); /* W3C */
+	color: #fff;
+}
+.promo .background-green .title {
+	margin-top: 183px;
+}
+.promo .background-green .title h2 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 40px;
+	font-family: 'HoeflerText';
+	font-style: italic;
+	color: #fff;
+}
+.promo .background-green .desc {
+	font-size: 19px;
+	margin: 14px 20px 0 20px;
+	text-align: center;
+}
+.promo .background-blue {
+	background: -webkit-linear-gradient(top, #0074B5 0%, #00CCB3 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #0074B5 0%, #00CCB3 100%); /* W3C */
+	color: #fff;
+}
+.promo .background-blue .title {
+	font-size: 30px;
+	margin-top: 129px;
+	font-family: 'HoeflerText';
+	font-style: italic;
+	font-weight: 700;
+	padding: 0 15px 0 15px;
+	line-height: 30px;
+}
+.promo .background-blue .desc img {
+	position: absolute;
+	width: 79.5%;
+	display: block;
+	margin: 36px auto;
+	max-width: 250px;
+}
+.promo .background-blue .desc .talk-1 {
+	top: 231px;
+	left: 20px;
+	right: 50px;
+	z-index: 2;
+}
+.promo .background-blue .desc .talk-2 {
+	top: 279.5px;
+	left: 55px;
+	right: 15px;
+	z-index: 1;
+}
+.promo .background-dark-blue {
+	background: -webkit-linear-gradient(top, #3945C7 0%, #00CCB3 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #3945C7 0%, #00CCB3 100%); /* W3C */
+	color: #fff;
+}
+.promo .background-dark-blue .title {
+	font-size: 30px;
+	margin-top: 130px;
+	font-family: 'HoeflerText';
+	font-style: italic;
+	font-weight: 700;
+	padding: 0 15px 0 15px;
+	line-height: 30px;
+}
+.promo .background-dark-blue .desc .avatar {
+	display: block;
+	margin: 36.5px auto 0 auto;
+	width: 50px;
+	box-sizing: border-box;
+}
+.promo .background-dark-blue .desc .example {
+	display: block;
+	margin: 8px auto;
+	padding-top: 5px;
+	width: 89%;
+	font-weight: 500;
+}
+.promo .background-dark-blue .desc .example .name {
+	font-size: 15px;
+	font-weight: 700;
+	font-family: 'Helvetica Neue';
+}
+.promo .background-dark-blue .desc .example .position {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Helvetica Neue';
+}
+.promo .background-dark-blue .desc .example .comment {
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: 500;
+	font-family: 'Helvetica Neue';
+}
+.promo .background-purpur {
+	background: -webkit-linear-gradient(top, #5C19AF 0%, #00CCB3 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #5C19AF 0%, #00CCB3 100%); /* W3C */
+	color: #fff;
+}
+.promo .background-purpur .title {
+	margin-top: 128px;
+	font-family: 'HoeflerText';
+	font-style: italic;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 30px;
+}
+.promo .background-purpur .desc {
+	margin-top: 43px;
+	font-size: 15px;
+	height: 60%;
+	position: relative;
+}
+.promo .background-purpur .desc button {
+	background-color: transparent;
+	border: 1px solid #fff;
+	height: 55px;
+	color: #fff;
+	border-radius: 4px;
+	font-family: 'Helvetica Neue';
+	font-size: 19px;
+	padding: 0 15px 0 15px;
+}
+.promo .background-purpur .desc .container {
+	position: absolute;
+	bottom: 90px;
+	width: 100%;
+}
+.promo .background-purpur .desc button {
+	display: block;
+	margin: 0 auto 0 auto;
+	float: bottom;
+}

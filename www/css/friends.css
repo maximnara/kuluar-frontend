@@ -1,0 +1,42 @@
+.friends {
+	background: linear-gradient(to bottom,  #00B9C8 0%, #F7F4F1 100%); /* W3C */
+}
+.friends .scroll-content {
+	padding: 10px 0 10px 10px;
+}
+.friends .biege-background {
+	background-color: #F7F4F1;
+}
+
+.friends .list .item {
+	border: none;
+	background-color: transparent;
+	color: #593CAF;
+	font-family: 'Helvetica Neue';
+}
+
+.friends .list .item .item-content {
+	background-color: transparent;
+}
+
+.friends .bar-subheader {
+	color: #00A6CC;
+	font-family: 'Helvetica Neue';
+	font-size: 15px;
+}
+.friends .bar-subheader .button {
+	color: #00A6CC;
+	position: absolute;
+	right: 10px;
+}
+.friends .bar-subheader .button::before {
+	font-size: 16px!important;
+}
+.friends .empty-friend-list {
+	margin: 26.5px 0 0 0;
+	padding: 0;
+}
+.friends .empty-friend-list button {
+	display: block;
+	margin: 0 auto 0 auto;
+}

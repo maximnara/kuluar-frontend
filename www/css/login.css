@@ -1,0 +1,80 @@
+
+.login .phone .prefix {
+	position: absolute;
+	height: 55px;
+	width: 40px;
+	font-size: 18px;
+	padding: 15px 0 0 15px;
+}
+.login .phone .number {
+	background-color: transparent;
+	border: 1px solid #62D0CD;
+	border-radius: 4px 4px 0 0;
+	height: 55px;
+	/*padding-left: 31%;*/
+	text-align: center;
+	font-size: 19px;
+	font-family: 'Helvetica Neue';
+	color: #fff;
+	box-shadow: none;
+	-webkit-appearance:none!important;
+}
+.login .button {
+	width: 100%;
+	background-color: #62D0CD;
+	color: #fff;
+	font-family: 'Helvetica Neue';
+	border-color: rgba(255,255,255,0);
+	margin-top: 0!important;
+	margin-bottom: 1px!important;
+	padding: 8px 0 8px 0;
+	font-size: 19px;
+	border-radius: 0 0 4px 4px;
+	min-height: 45px;
+	height: 55px;
+	line-height: 0px;
+}
+
+.login .button.activated {
+	background-color: rgba(255,255,255,0.5);
+	color: #fff;
+	border: none;
+}
+.login .confirmation-code {
+	background-color: transparent;
+	border: 1px solid #62D0CD;
+	border-radius: 4px;
+	font-size: 19px;
+	font-family: 'Helvetica Neue';
+	color: #fff;
+	text-align: center;
+	box-shadow: none;
+	-webkit-appearance:none!important;
+	width: 120px;
+	height: 55px;
+	display: block;
+	margin: 0 auto;
+}
+
+.login .confirmation-code.wrong {
+	border-color: #FF958A;
+	background-color: rgba(255, 149, 138, 0.3);
+}
+
+.red .phone {
+	background-color: rgba(255, 149, 138, 0.5);
+}
+.red .phone input {
+	border-color: rgba(255, 149, 138, 0.7)!important;
+	border-bottom-color: transparent !important;
+}
+.red button {
+	border-color: rgba(255, 149, 138, 0.7)!important;
+	border-top-color: transparent !important;
+}
+.red button.activated {
+	box-shadow: none !important;
+	border: 1px solid rgba(255, 149, 138, 0.7) !important;
+	border-top-color: transparent !important;
+	background-color: #62D0CD !important;
+}

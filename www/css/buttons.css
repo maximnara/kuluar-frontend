@@ -1,0 +1,10 @@
+button.first-action {
+	background-color: transparent;
+	border: 1.5px solid #fff;
+	height: 55px;
+	min-width: 157.5px;
+	color: #fff;
+	border-radius: 4px;
+	font-family: 'Helvetica Neue';
+	font-size: 19px;
+}

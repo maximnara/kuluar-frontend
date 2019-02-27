@@ -1,0 +1,47 @@
+<ion-view class="profile" title="">
+	<!--<ion-nav-buttons side="right">
+		<a class="button button-icon icon ion-ios7-arrow-back" href="#/tab/setting"></a>
+	</ion-nav-buttons>-->
+	<ion-pane>
+		<div class="row header">
+			<div class="col avatar">
+				<img src="{{ selectedImageUrl || data.avatar || defaultProfile.avatar }}" ng-click="chooseImage()"/>
+			</div>
+			<!--<div class="col">
+				<img src="img/icons/edit.svg" style="width: 25px; height: 25px; position: absolute; right: 15px; top: 15px; z-index: 14;" ng-click="editMode=1;"/>
+			</div>-->
+			<div class="col-70 info">
+				<span class="name" ng-bind="data.name"></span>
+				<!--<span class="job" ng-bind="data.job" ng-hide="editMode"></span>-->
+				<div style="width: 100%;" ng-show="editMode">
+					<div class="phone">
+						<input type="text" class="number" placeholder="Укажите должность" ng-model="phone" style="background: transparent; padding-left: 15px; border-radius: 4px; border: 1.5px #62D0CD; text-align: center; color: #62D0CD;" />
+					</div>
+					<button ng-click="sendPhone()" style="width: 100%;">
+						Отправить
+					</button>
+				</div>
+			</div>
+		</div>
+		<ion-scroll overflow-scroll="true" scrollbar-y="false" ng-class="{'not-my-profile': !isMyProfile}">
+			<div class="comments">
+				<ion-footer-bar align-title="left" class="leave-comment" ng-hide="isMyProfile">
+					<button class="button" ng-click="openCreateCommentModal()">Оставить отзыв</button>
+				</ion-footer-bar>
+				<div class="comment-list" ng-show="comments.length > 0">
+					<div class="item item-body comment" ng-repeat="comment in comments | orderBy : comment.date : true" ng-click="showMoreComment(comment.id)">
+						<div class="author" ng-bind="comment.author.name" ng-hide="comment.isAnonymous" ui-sref="tab.profile({id: comment.author.id})"></div>
+						<div class="author" ng-show="comment.isAnonymous" ui-sref="tab.profile({id: comment.author.id})">Аноним</div>
+						<div class="text" ng-bind="comment.text"></div>
+					</div>
+				</div>
+			</div>
+		</ion-scroll>
+		<div class="empty-comments-text not-my-profile" ng-show="comments.length == 0 && !isMyProfile">
+			Вы можете написать комментарий к профилю человека, высказаться, оставить отзыв, в том числе анонимный.
+		</div>
+		<div class="empty-comments-text" ng-show="comments.length == 0 && isMyProfile">
+			Здесь будут комментарии к вашему профилю.
+		</div>
+	</ion-pane>
+</ion-view>

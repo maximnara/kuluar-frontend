@@ -1,0 +1,181 @@
+.profile .header {
+	background: linear-gradient(#00B9C8, #00CCB3);
+	/* Для поля должность */
+	/*height: 290px;*/
+	height: 255px;
+	padding: 0;
+}
+
+.profile.pane {
+	background-color: #00B9C8;
+}
+
+.profile .header .avatar {
+	position: absolute;
+	top: 32px;
+	padding: 0;
+	z-index: 11;
+}
+
+.profile .header .avatar img {
+	width: 120px;
+	border-radius: 100px;
+	display: block;
+	margin: 0 auto 0 auto;
+}
+
+.profile .header .info {
+	position: absolute;
+	top: 174px;
+	color: #fff;
+	width: 70%;
+	text-align: center;
+	left: 15%;
+}
+
+.profile .header .info .name {
+	line-height: 30px;
+	font-size: 30px;
+	font-family: 'Hoefler Text';
+	font-style: italic;
+	display: block;
+}
+
+.profile .header .info .job {
+	padding: 10px 0 0 0;
+	text-align: center;
+	font-size: 13px;
+	font-family: 'Helvetica Neue';
+	display: block;
+}
+
+.profile .comments .item {
+	border: none;
+}
+
+.profile .comments {
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.profile .leave-comment {
+	bottom: 0;
+	background-color: #fff;
+	border-bottom: 1px #D3D0CE solid;
+}
+
+.profile .leave-comment button::before {
+	color: #8E8E93;
+}
+
+.profile .leave-comment input {
+	border-radius: 3px;
+	font-family: 'Helvetica Neue';
+	padding-left: 10px;
+}
+
+.profile .scroll-content {
+	overflow: visible;
+	background-color: #fff;
+}
+
+.profile .comments .comment-list {
+	position: absolute;
+	width: 100%;
+}
+
+.profile .comments .comment-list .comment:first-child {
+	padding-top: 15px;
+}
+.profile .comments .comment-list .comment {
+	padding: 5px 15px 5px 15px;
+}
+.profile .comments .comment-list .comment .author {
+	color: #593CAF;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	font-weight: 600;
+	display: inline;
+}
+.profile .comments .comment-list .comment .text {
+	display: inline;
+	font-size: 14px;
+	font-family: 'Helvetica';
+}
+
+.profile .scroll-view {
+	overflow: visible;
+	z-index: 14;
+	position: absolute;
+	width: 100%;
+	bottom: 56px;
+	/* Для поля должность */
+	/*top: 295px; */
+	top: 265px;
+}
+
+.profile .scroll-view.not-my-profile {
+	/* Для поля должность */
+	/*top: 330px;*/
+	top: 300px;
+}
+
+.profile .leave-comment button {
+	border: 0;
+	background-color: inherit;
+	color: #00A6CC;
+	font-size: 15px;
+	margin: 3px auto 0 auto;
+	display: block;
+	font-family: 'Helvetica Neue';
+}
+.profile .leave-comment button.activated {
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.profile .empty-comments-text {
+	position: absolute;
+	padding: 15px 10px 0 15px;
+	font-size: 13px;
+	color: #B0B0B0;
+	font-family: 'Helvetica Neue';
+}
+
+.profile .empty-comments-text.not-my-profile {
+	margin-top: 40px;
+}
+
+/* Begin: плавающая шапка анонимного/неанонимного комментария */
+.profile .bar-header {
+	transition: 0.15s linear all;
+	background: linear-gradient(to bottom, #00B9C8, #00CCB3);
+	border: 0;
+}
+.profile .bar-header.ng-hide-remove {
+	top: -100px;
+}
+.profile .bar-header.ng-hide-remove-active {
+	top: 0;
+}
+.profile .bar-header.ng-hide-add {
+	top: 0;
+}
+.profile .bar-header.ng-hide-add-active {
+	top: -100px;
+}
+.profile .bar-header.anonymous {
+	background: linear-gradient(to bottom, #6950B6, #5473D0);
+}
+.profile .bar-header .title {
+	color: #fff;
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+}
+.profile .bar-header .right-button {
+	position: absolute;
+	right: 15px;
+	display: initial;
+}
+/* End */

@@ -1,0 +1,12 @@
+<ion-view title="Кулуар" class="feed" ng-class="{'empty':!list}">
+	<ion-content header-shrink scroll-event-interval="5">
+        <ion-refresher on-refresh="get(1)" ng-show="list" on-refresh="">
+        </ion-refresher>
+		<div ng-show="!list">
+			<ng-include src="'templates/feed/empty-feed.html'"></ng-include>
+		</div>
+		<div ng-show="list">
+			<ng-include src="'templates/feed/feed.html'"></ng-include>
+		</div>
+	</ion-content>
+</ion-view>

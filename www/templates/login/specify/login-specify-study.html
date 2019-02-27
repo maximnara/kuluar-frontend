@@ -1,0 +1,24 @@
+<ion-view title="Учебная группа" class="background-gradient specify">
+	<ion-content class="padding">
+		<div class="row white-text">
+			<div class="col padding invite multiple-items">
+				<div class="">
+					<label class="item item-input">
+						<input type="text" placeholder="Название группы" ng-model="data.groupName" ng-disabled="data.groupId">
+					</label>
+					<label class="item item-input">
+						<input type="text" placeholder="Имя и фамилия" ng-model="data.username">
+					</label>
+				</div>
+				<button class="button button-block" ng-click="save()">
+					Готово
+				</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col padding-left white-text" style="text-align: center;">
+				Расскажите немного о группе и себе. Тогда<br/>вы сможете приглашать друзей<br/>в кулуар, а они смогут узнать вас.
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

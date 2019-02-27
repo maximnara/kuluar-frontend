@@ -1,0 +1,202 @@
+.post-page {
+
+}
+.post-page .item {
+	border: none;
+	padding: 0;
+}
+
+.post-page .back-button::before {
+	color: #00A7CA;
+}
+.post-page .title {
+	font-family: 'Helvetica Neue';
+}
+.post-page .title .author {
+	height: 16px;
+	margin-top: -5px;
+	font-size: 14px;
+	color: #593CAF;
+}
+.post-page .title .date {
+	font-size: 12px;
+	color: #a9aeaf;
+}
+.post-page .post-body {
+	padding-bottom: 50px;
+}
+.post-page .post-text {
+	border: 0;
+	padding-bottom: 10px;
+	margin: 15px 0 0 15px;
+}
+.post-page .post-footer {
+	background: transparent;
+	border-top: none;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	height: 45px;
+	border-bottom: 0.5px solid #D3D0CE;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	color: #B0B0B0;
+}
+.post-page .post-footer .left-button {
+	margin-left: 15px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	font-weight: 400;
+	color: #B0B0B0;
+    position: absolute;
+    top: 11px;
+}
+.post-page .post-footer .button-title {
+	position: absolute;
+	left: 15px;
+	top: 13px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+}
+.post-page .post-footer .right-button {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+}
+.post-page .post-footer .right-button.activated {
+	background-color: #F7F4F1;
+}
+.post-page .post-footer .toggle {
+	position: absolute;
+	right: 10px;
+}
+.post-page .comments .comment:first-child {
+	padding-top: 15px;
+}
+.post-page .comments .comment {
+	padding: 5px 15px 5px 15px;
+}
+.post-page .comments .comment .author {
+	color: #593CAF;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	font-weight: 600;
+	display: inline;
+}
+.post-page .comments .comment .text {
+	display: inline;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	white-space: pre;
+}
+.post-page .comment.bar-footer {
+	background-color: #F7F4F1;
+	min-height: 44px;
+	height: initial;
+}
+.post-page .comment.bar-footer.anonymous {
+	background-color: #545454;
+}
+.post-page .comment.bar-footer input {
+	width: 85%;
+	border-radius: 4px;
+	padding: 2px 0 0 10px !important;
+}
+.post-page .comment.bar-footer .right-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.post-page .comment.bar-footer button::before {
+	color: #8E8E93;
+}
+.post-page .post-button.like {
+	position: absolute;
+	top: 5px;
+}
+.post-page .post-button.like .b-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    background-color: #D3D0CE;
+    -webkit-mask: url(../img/like.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
+.post-page .post-button .icon-counter {
+    color: #D3D0CE;
+    position: absolute;
+    top: 7px;
+    left: 48px;
+}
+.post-page .post-button.like.active .b-icon {
+	background-color: #FBB3B3;
+}
+.post-page .post-button.like.active .icon-counter {
+	color: #FBB3B3;
+}
+.post-page .body .image {
+	width: 95%;
+	padding-bottom: 0px;
+}
+
+.post-page .button.icon.icon-more {
+	top: 20px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background-color: #00A6CC;
+	-webkit-mask: url(../img/icons/more.svg);
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+}
+
+.post-page.pane .bar-header .button.button-icon::before {
+	font-size: 26px;
+	color: #00A6CC;
+}
+
+.post-page.pane .bar-header .button.button-icon:first-child {
+	padding-left: 3px;
+}
+
+/* Begin: плавающая шапка анонимного/неанонимного комментария */
+.post-page.pane .comment-type.bar-header {
+	-webkit-transform: translateZ(0);
+	transition: 0.1s linear all;
+	background: linear-gradient(to bottom, #00B9C8, #00CCB3);
+	border: 0;
+}
+.post-page.pane .bar-header.ng-hide-remove {
+	opacity: 0;
+}
+.post-page.pane .bar-header.ng-hide-remove-active {
+	opacity: 1;
+}
+.post-page.pane .bar-header.ng-hide-add {
+	opacity: 1;
+}
+.post-page.pane .bar-header.ng-hide-add-active {
+	opacity: 0;
+}
+.post-page.pane .bar-header.anonymous {
+	background: linear-gradient(to bottom, #6950B6, #5473D0);
+}
+.post-page.pane .bar-header .title {
+	color: #fff;
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+}
+.post-page.pane .bar-header .right-button {
+	position: absolute;
+	right: 15px;
+	display: initial;
+}
+/* End */
+
+
+.post-page textarea::-webkit-input-placeholder {
+	padding-left: 2px;
+}

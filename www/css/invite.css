@@ -1,0 +1,34 @@
+.invite-nav-bar {
+	background: linear-gradient(to bottom, #00B9C8, #00CCB3);
+}
+.invite-nav-bar .title {
+	color: #fff;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-size: 15px;
+}
+.invite .bar-subheader {
+	background-color: #00CCB3;
+}
+
+.invite .bar-subheader .search input {
+	border-radius: 4px!important;
+	height: 25px;
+	margin: 0 0 0 3%;
+	width: 84%;
+	padding-left: 8%;
+}
+.invite .bar-subheader .search .label {
+	color: #8E8E93;
+	position: absolute;
+	top: 22%;
+	left: 40%;
+	font-family: 'Helvetica Neue';
+}
+.invite .search>span {
+	-webkit-transform: translateZ(0);
+	-webkit-transition:all 0.2s ease-in-out;
+}
+.invite .search>span.searchInputFocused {
+	left: 7%!important;
+}

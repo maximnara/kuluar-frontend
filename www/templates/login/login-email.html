@@ -1,0 +1,24 @@
+<ion-view title="Почта" class="background-gradient">
+	<ion-content class="padding">
+		<div class="row white-text" style="margin-top: 50px;">
+			<div class="col-80 col-offset-10 padding invite multiple-items">
+				<div>
+					<label class="item item-input">
+						<input type="email" placeholder="Почта" ng-model="user.mail">
+					</label>
+					<label class="item item-input">
+						<input type="text" placeholder="Пароль" ng-model="user.password">
+					</label>
+				</div>
+				<button class="button button-block" ng-click="login()">
+					Войти
+				</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-80 col-offset-10 padding-top" style="text-align: center;" ui-sref="resetPassword">
+				Я забыл пароль
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

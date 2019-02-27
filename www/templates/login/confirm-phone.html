@@ -1,0 +1,35 @@
+<ion-view title="" class="background-gradient login">
+	<div class="row" style="margin-top: 75px;">
+		<div class="col-50 col-offset-25">
+			<h2 class="white-text special-font" style="text-align: center; font-size: 40px;">Кулуар</h2>
+		</div>
+	</div>
+	<div class="row white-text">
+		<div class="col login-buttons" style="margin-top: 30px;">
+			<input type="tel" class="confirmation-code" ng-model="confirmationCode" ng-class="{wrong: codeWrong}" maxlength="4" ng-minlength="4" focus-on-load/>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-90 padding-top" style="margin-left: 5%; text-align: center; color: #fff; text-decoration: none; margin-top: 10px; font-size: 15px; font-weight: 400; font-family: 'Helvetica Neue';" ng-hide="canSendAgain || codeWrong">
+			На номер <span ng-bind="selectedRegion + phone" style="text-decoration: none!important;" format="telephone=no"></span><br/>
+			 отправлен код. Если не придет через<br/>
+			минуту, отправьте еще раз.
+			<div style="margin-top: 12.5px; width: 100%;">
+				<div style="display: block; margin: 0 auto; width: 40px;">
+					<div easypiechart options="options" percent="100"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-80 col-offset-10 padding-top"  style="text-align: center; color: #fff; margin-top: 10px; font-size: 15px; font-weight: 400; font-family: 'Helvetica Neue';" ng-show="canSendAgain && !codeWrong && !codeResended" ng-click="resendCode()">
+			Отправить код еще раз
+		</div>
+		<div class="col-80 col-offset-10 padding-top"  style="text-align: center; color: #fff; margin-top: 10px; font-size: 15px; font-weight: 400; font-family: 'Helvetica Neue';" ng-show="codeResended && !codeWrong">
+			Если код не пришел<br/>
+			напишите <a href="mailto:kuluarapp@gmail.com" style="color: #fff;">нам на почту</a>
+		</div>
+		<div class="col-80 col-offset-10 padding-top"  style="text-align: center; color: #fff; margin-top: 10px; font-size: 15px; font-weight: 400; font-family: 'Helvetica Neue';" ng-show="codeWrong">
+			Неправильный код. <br/>
+			Попробуйте еще раз.
+		</div>
+	</div>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-list class="card">
+	<div ng-repeat="(key, item) in list | orderBy:timestamp:false track by item.id" class="post">
+		<div class="item header" bindonce>
+            <p bo-show="item.anonymous" class="author-name" bo-text="item.author.name" ng-click="openProfile(item.author.id)"></p>
+			<p bo-text="item.author.name" bo-show="!item.anonymous" class="author-name" ng-click="openProfile(item.author.id)"></p>
+			<p bo-text="item.date" class="date" style="float: right;"></p>
+		</div>
+		<div class="item item-body body" ui-sref="tab.post({postId: key})" bindonce>
+			<p bo-text="item.text" class="text"></p>
+			<img class="full-image image" bo-src="item.attachment.img[0]" bo-show="item.attachment.img[0]" alt=""/>
+		</div>
+		<div class="bar post-footer" bindonce>
+			<a class="icon-left left-button comment" ng-class="{'is-active': item.comment.commented}" ui-sref="tab.post({postId: key})">
+				<div>
+					<i class="b-icon"></i>
+					<span class="icon-counter" ng-bind="item.comment.count"></span>
+				</div>
+			</a>
+			<div class="title"><img src="img/feed-delimiter.png" style="width: 0,8px; height: 16px;" /></div>
+			<div class="right-button" ng-click="toggleLike(key)">
+				<a class="icon-left post-button like" ng-class="{'is-active': item.like.liked}">
+					<i class="b-icon"></i>
+					<span class="icon-counter" ng-bind="item.like.count"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<ion-infinite-scroll ng-if="canScrollMore" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
+</ion-list>

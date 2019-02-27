@@ -1,0 +1,37 @@
+.popover-backdrop .feature {
+	position:absolute;
+	width: 90%;
+	height: 90%;
+	left: 5%;
+	top: 5%;
+	background: linear-gradient(#FFFFFF, #F8F8F8);
+	border-radius: 6px;
+}
+
+.popover-backdrop .feature .feature-icon {
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 15% auto auto auto;
+}
+.popover-backdrop .feature .description {
+	text-align:center;
+	margin: 15% auto auto auto;
+}
+.popover-backdrop .feature .description .main {
+	color: #593CAF;
+	font-family: 'Hoefler Text';
+	font-size: 32.5px;
+	line-height: 36px;
+	font-style: italic;
+}
+.popover-backdrop .feature .description .full {
+	font-family: 'Helvetica Neue';
+	font-size: 15px;
+	margin-top: 14px;
+}
+.popover-backdrop .feature .description button.first-action {
+	border-color: #00A6CC;
+	color: #00A6CC;
+	margin-top: 35px;
+}

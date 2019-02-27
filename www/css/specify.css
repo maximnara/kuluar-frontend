@@ -1,0 +1,32 @@
+.specify {
+
+}
+.specify input[disabled] {
+	background-color: transparent;
+}
+
+.specify input {
+	height: 55px;
+	font-family: 'Helvetica Neue';
+	font-size: 19px;
+	padding: 0;
+	line-height: 22px;
+}
+
+.specify input::-webkit-input-placeholder {
+	color: #FFFFFF!important;
+	opacity: 0.5;
+	font-family: 'Helvetica Neue';
+	font-size: 19px;
+}
+
+.specify input:focus::-webkit-input-placeholder { color:transparent!important; }
+.specify label.item {
+	padding: 0;
+}
+
+.specify button {
+	width: 101%;
+	margin-left: -0.5%;
+	margin-top: 0!important;
+}

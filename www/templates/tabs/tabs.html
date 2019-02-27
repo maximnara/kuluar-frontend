@@ -1,0 +1,14 @@
+<ion-tabs class="tabs-icon-top" ng-class="{'tabs1': isNavBarColorBiege, 'tabs-item-hide': isTabsHidden, 'biege-background': navBarBiege}">
+	<ion-tab icon="icon-people" href="#/tab/friends">
+		<ion-nav-view name="tab-friends"></ion-nav-view>
+	</ion-tab>
+	<ion-tab icon="icon-feed" href="#/tab/feed">
+		<ion-nav-view name="tab-feed"></ion-nav-view>
+	</ion-tab>
+	<ion-tab icon="icon-post" ng-click="openCreatePostModal()">
+		<ion-nav-view name="tab-post-modal"></ion-nav-view>
+	</ion-tab>
+	<ion-tab icon="icon-profile" href="#/tab/profile/">
+		<ion-nav-view name="tab-profile"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>

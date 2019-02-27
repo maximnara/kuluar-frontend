@@ -1,0 +1,45 @@
+<ion-view title="Коллеги" class="friends">
+	<ion-header-bar  class="bar-subheader" ng-show="list && !contactBookBlocked" ui-sref="tab.invite">
+		<div style="position: absolute; left: 24px;">
+			<img src="img/icons/invite-people.png" style="position: absolute; width: 25px; top: 7px;"/>
+			<span style="position: absolute; top: 7px; left: 30px;">Пригласить</span>
+		</div>
+		<a class="button icon-left ion-chevron-right button-clear"></a>
+	</ion-header-bar>
+	<ion-content class="padding" ng-class="{'biege-background': list && !contactBookBlocked}">
+		<div ng-show="!list && !contactBookBlocked" style="margin-top: 196px;">
+			<div class="row">
+				<span class="col-100 white-text special-font padding-top" style="text-align: center; font-family: 'HoeflerText'; font-style: italic; font-weight: 600; font-size: 32.5px; width: 100%; line-height: 30px;">
+					Тебе тут понравится
+				</span>
+			</div>
+			<div class="row">
+				<div class="col empty-friend-list">
+					<button class="first-action" ui-sref="tab.invite">Пригласить коллег</button>
+				</div>
+			</div>
+		</div>
+		<div ng-show="list && !contactBookBlocked">
+			<ion-list>
+				<ion-item ng-repeat="item in list | orderObjectBy:'name':false" ng-click="openProfile(item.id)">
+					<span ng-bind="item.name"></span>
+					<div style="height: 0.5px; width: 100%; background-color: #B0B0B0; position: absolute; bottom: 0;"></div>
+				</ion-item>
+			</ion-list>
+		</div>
+		<div ng-show="contactBookBlocked" style="margin-top: 143px;">
+			<div class="row" style="margin-top: 10px;">
+				<span class="col-100 white-text special-font padding-top" style="text-align: center; font-weight: 600; font-family: 'HoeflerText'; font-style: italic; font-size: 32.5px; width: 100%; line-height: 30px;">
+					Без людей тут<br/>будет скучно
+				</span>
+			</div>
+			<div class="row">
+				<span class="col-100 padding-top" style="margin-top: 9px; text-align: center; font-weight: 400; width: 100%;">
+					Зайдите в Настройки › Доступ ›<br/>
+					 Контакты, включите Кулуар<br/>
+					 и приглашайте коллег
+				</span>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
